@@ -1,4 +1,4 @@
-# SparkBatchHbase
+# GoLivyRestAPI
 This program has function to run spark apps via livy using golang
 
 <br />
