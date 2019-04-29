@@ -1,0 +1,6 @@
+{
+    "url": "http://localhost:8998/batches",
+    "portapi": "1212",
+    "pathjar": "/home/ebdesk/IdeaProjects/SparkBatchHbase/target/SparkBatchHbase-1.0-jar-with-dependencies.jar",
+    "classname": "org.research.main.BatchHbaseFromCSV"
+}

@@ -1,0 +1,83 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: Swagger Massive Profilling
+  license:
+    name: Ebdesk
+host: 192.168.12.18:1212
+basePath: /
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /runlivy:
+    post:
+      summary: to post query to generator data
+      operationId: runlivy
+      tags:
+        - runlivy
+      parameters:
+        - name: param
+          in: body
+          description: to post query to generator data
+          required: true
+          schema:
+            $ref: '#/definitions/Params'
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Post'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Params:
+    required:
+      - table
+      - zooKeeper
+      - hbaseMaster
+      - pathCSV
+    properties:
+      table:
+        type: string
+      zooKeeper:
+        type: string
+      hbaseMaster:
+        type: string
+      pathCSV: 
+        type: string
+  Post:
+    required:
+      - status
+      - message
+      - data
+    properties:
+      status:
+        type: string
+      message:
+        type: string
+      data:
+        type: string
+  Posts:
+    type: array
+    items:
+      $ref: '#/definitions/Post'
+  Error:
+    required:
+      - error
+      - message
+      - status
+    properties:
+      error:
+        type: integer
+        format: int32
+      message:
+        type: string
+      status:
+        type: boolean
