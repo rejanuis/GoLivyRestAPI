@@ -37,4 +37,4 @@ docker run -d -p 1212:1212 -v /home/reja/goproject/GoLivyRestAPI/config:/config 
 </pre>
 
 ## Example test
-<pre>curl -XPOST localhost:1212/runlivy -d '{"table":"winevariety","zooKeeper":"master.research.ph,datanode1.research.ph,datanode2.research.ph","hbaseMaster":"master.research.ph","pathCSV":"file:///home/ebdesk/IdeaProjects/SparkBatchHbase/zomato.csv"}'</pre>
+<pre>curl -XPOST localhost:1212/runlivy -d '{"table":"winevariety","zooKeeper":"master.research.ph,datanode1.research.ph,datanode2.research.ph","hbaseMaster":"master.research.ph","pathCSV":"file:///home/reja/IdeaProjects/SparkBatchHbase/zomato.csv"}'</pre>
