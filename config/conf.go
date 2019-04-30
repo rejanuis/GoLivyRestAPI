@@ -24,7 +24,7 @@ func GetConfig(key string) string {
 	//========= set config using viper library
 	viper.SetConfigName("config")
 	viper.SetConfigType("json")
-	viper.AddConfigPath("/home/ebdesk/goproject/GoLivyRestAPI/config/")
+	viper.AddConfigPath("/config/")
 	errs := viper.ReadInConfig()
 	if errs != nil {
 		log.Fatal(errs)
