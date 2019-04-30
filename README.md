@@ -35,3 +35,6 @@ livy.file.local-dir-whitelist = /home/reja/ #add this line for path of jar spark
 <pre>
 docker run -d -p 1212:1212 -v /home/reja/goproject/GoLivyRestAPI/config:/config golivyrest:v1
 </pre>
+
+## Example test
+<pre>curl -XPOST localhost:1212/runlivy -d '{"table":"winevariety","zooKeeper":"192.168.114.84,192.168.114.171,192.168.114.172","hbaseMaster":"192.168.114.84","pathCSV":"file:///home/ebdesk/IdeaProjects/SparkBatchHbase/winemag-data_first150k2.csv"}'</pre>
